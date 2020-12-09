@@ -1,0 +1,211 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$jE8Aocadid1M$G8jcQhx1EC2ol49PX7/oX9wOXqb0j+FgE22YgpIhOjU=",
+    "last_login": "2020-12-09T20:09:50.116Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-12-09T20:09:21.721Z",
+    "supervisor": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "Oa3Dlekfw$",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "christine27",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-12-09T20:09:24.694Z",
+    "supervisor": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "f5Nw6Mod@*",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "burnschelsea",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-12-09T20:09:24.703Z",
+    "supervisor": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "+j2ZWWn1y$",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "daviskyle",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-12-09T20:09:24.708Z",
+    "supervisor": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 5,
+  "fields": {
+    "password": "Z%Q117Hs6*",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "estradakaren",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-12-09T20:09:24.712Z",
+    "supervisor": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "eh3RGfLC&3",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "carolmcgee",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-12-09T20:09:24.718Z",
+    "supervisor": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 7,
+  "fields": {
+    "password": "r9Da3!W5!u",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "anthony74",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-12-09T20:09:24.724Z",
+    "supervisor": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 8,
+  "fields": {
+    "password": "QeMg8FEz(L",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ygarcia",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-12-09T20:09:24.730Z",
+    "supervisor": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 9,
+  "fields": {
+    "password": "c(g9%AnDKp",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "michaelhull",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-12-09T20:09:24.736Z",
+    "supervisor": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 10,
+  "fields": {
+    "password": "D)$0Q9eb95",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "lawrencebriana",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-12-09T20:09:24.742Z",
+    "supervisor": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 11,
+  "fields": {
+    "password": "(f8dIIqU0e",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jessicabuck",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-12-09T20:09:24.748Z",
+    "supervisor": true,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
