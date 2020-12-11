@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 
+<!-- static -->
+
+{% load static %}
+
 <!-- index -->
 
 {% block content %}
-<div class="columns mt-3">
+<div ng-app="app" class="columns mt-3">
   <div class="column is-3">
     <aside class="">
       <div class="card">
@@ -46,7 +50,7 @@
       </div>
     </section>
 
-    <div class="card">
+    <div ng-controller="ReportController" class="card">
       <div class="card-content">
         <div class="table-container">
           <table class="table is-striped is-hoverable is-fullwidth">
@@ -57,21 +61,16 @@
                 <th>Supervisors</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody ng-repeat="report in reports">
               <tr>
-                <td>Size major spend few security between agency.</td>
-                <td>Dennis Johnson</td>
-                <td>Debra Howard</td>
-              </tr>
-              <tr>
-                <td>Size major spend few security between agency.</td>
-                <td>Dennis Johnson</td>
-                <td>Debra Howard</td>
-              </tr>
-              <tr>
-                <td>Size major spend few security between agency.</td>
-                <td>Dennis Johnson</td>
-                <td>Debra Howard</td>
+                <td>[[report.message]]</td>
+                <td>
+                  [[report.author.first_name]] [[report.author.last_name]]
+                </td>
+                <td>
+                  [[report.supervisors[0].first_name]]
+                  [[report.supervisors[0].last_name]]
+                </td>
               </tr>
             </tbody>
           </table>
@@ -80,4 +79,12 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+<!-- js -->
+{% block js %}
+<!-- static -->
+{{ block.super }}
+<script src="{% static 'app.js' %}"></script>
+<script src="{% static 'src/controllers/reportController.js' %}"></script>
 {% endblock %}
