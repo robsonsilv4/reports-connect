@@ -17,7 +17,7 @@
         <div class="card-content" ng-repeat="user in users">
           <ul>
             <label class="checkbox">
-              <input type="checkbox" ng-model="user" class="mr-1" />
+              <input type="checkbox" class="mr-1" />
               [[user.first_name]] [[user.last_name]]
             </label>
           </ul>
@@ -68,6 +68,19 @@
   </div>
 </div>
 {% endblock %}
+
+<div id="reportResponsesModal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <button
+    ng-click="vm.closeModal('custom-modal-1');"
+    class="modal-close is-large"
+  >
+    Close
+  </button>
+</div>
 
 <!-- js -->
 {% block js %}
