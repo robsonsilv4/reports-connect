@@ -4,5 +4,6 @@ from django.urls.conf import include
 
 urlpatterns = [
     path("", include("reports.urls")),
+    path("users/", include("users.urls")),
     path("admin/", admin.site.urls),
 ]
