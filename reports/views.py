@@ -9,7 +9,6 @@ from .serializers import ReportSerializer
 
 
 class ReportViewSet(ModelViewSet):
-    queryset = Report.objects.all()
     serializer_class = ReportSerializer
     http_method_names = [
         "get",
