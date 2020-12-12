@@ -51,7 +51,11 @@
             </thead>
             <tbody ng-repeat="report in reports">
               <tr>
-                <td>[[report.message]]</td>
+                <td>
+                  <a class="modal-button" ng-click="toggleModal()"
+                    >[[report.message]]</a
+                  >
+                </td>
                 <td>
                   [[report.author.first_name]] [[report.author.last_name]]
                 </td>
@@ -64,23 +68,39 @@
           </table>
         </div>
       </div>
+
+      <report-modal show="showModal">
+        <div class="table-container">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Message</th>
+                <th>Author</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>[[reports[0].responses[0].message]]</td>
+                <td>
+                  [[reports[0].responses[0].author.first_name]]
+                  [[reports[0].responses[0].author.last_name]]
+                </td>
+              </tr>
+              <tr>
+                <td>[[reports[0].responses[1].message]]</td>
+                <td>
+                  [[reports[0].responses[1].author.first_name]]
+                  [[reports[0].responses[1].author.last_name]]
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </report-modal>
     </div>
   </div>
 </div>
 {% endblock %}
-
-<div id="reportResponsesModal" class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <p>Lorem ipsum dolor sit amet.</p>
-  </div>
-  <button
-    ng-click="vm.closeModal('custom-modal-1');"
-    class="modal-close is-large"
-  >
-    Close
-  </button>
-</div>
 
 <!-- js -->
 {% block js %}
@@ -89,4 +109,5 @@
 <script src="{% static 'app.js' %}"></script>
 <script src="{% static 'src/controllers/reportController.js' %}"></script>
 <script src="{% static 'src/controllers/usersController.js' %}"></script>
+<script src="{% static 'src/directives/reportModal.js' %}"></script>
 {% endblock %}
