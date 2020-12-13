@@ -5,23 +5,15 @@
     var user = '';
 
     function getUser() {
-      var currentUser = localStorage.getItem('currentUser');
-
-      if (currentUser) {
-        user = currentUser;
-      }
-
       return user;
     }
 
     function setUser(newUser) {
       user = newUser;
-      localStorage.setItem('currentUser', user);
     }
 
     function clear() {
       user = '';
-      localStorage.removeItem('currentUser');
     }
 
     return {
