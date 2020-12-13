@@ -3,21 +3,20 @@
 
   angular
     .module('app')
-    .controller('UsersController', function ($scope, $rootScope, $http) {
-      $http.get(`${$rootScope.baseUrl}/users/`).then(function (response) {
-        const users = response.data.results;
-        $scope.users = users;
-      });
+    .controller(
+      'UsersController',
+      function ($scope, $rootScope, $http, UserService) {
+        var url = $rootScope.baseUrl + '/users/';
 
-      var currentUser = localStorage.getItem('currentUser');
+        $http.get(url).then(function (response) {
+          var users = response.data.results;
+          $scope.users = users;
+        });
 
-      if (currentUser) {
-        $scope.selectedUser = currentUser;
+        $scope.selectUser = function (selectedUser) {
+          $scope.selectedUser = selectedUser;
+          UserService.setCurrentUser(selectedUser);
+        };
       }
-
-      $scope.selectUser = function (selectedUser) {
-        $scope.selectedUser = selectedUser;
-        localStorage.setItem('currentUser', selectedUser);
-      };
-    });
+    );
 })();
