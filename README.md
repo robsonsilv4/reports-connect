@@ -1,8 +1,6 @@
-# Reports Connect 🍃
+# 🍃 Reports Connect
 
 A simple reports management application build for Heavy Connect challenge.
-
-## Preview
 
 |                                          |                                                 |                                            |
 | :--------------------------------------- | :---------------------------------------------: | :----------------------------------------: |
@@ -49,7 +47,104 @@ Now, just run the server:
 python manage.py runserver
 ```
 
-http://127.0.0.1:8000/
+## Usage
+
+To use application, just navigate to http://127.0.0.1:8000/.
+
+## API
+
+The API have two endpoints: _/reports_ and _/users_ (bonus).
+
+### Reports:
+
+http://127.0.0.1:8000/reports/
+
+That will returns:
+
+```json
+{
+  "count": 100,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "message": "Size major spend few security between agency.",
+      "author": {
+        "first_name": "Dennis",
+        "last_name": "Johnson",
+        "email": "karen57@mcmahon.com"
+      },
+      "supervisors": [
+        {
+          "first_name": "Debra",
+          "last_name": "Howard",
+          "email": "smithcarol@hotmail.com"
+        }
+      ],
+      "responses": [
+        {
+          "message": "Bank according style seek forward difficult follow learn us around serious.",
+          "author": {
+            "first_name": "Debra",
+            "last_name": "Howard",
+            "email": "smithcarol@hotmail.com"
+          }
+        },
+        {
+          "message": "Church executive none relationship positive add see.",
+          "author": {
+            "first_name": "Debra",
+            "last_name": "Howard",
+            "email": "smithcarol@hotmail.com"
+          }
+        }
+      ]
+    }
+    // ...
+  ]
+}
+```
+
+You can also filter reports of a specific user or supervisor:
+
+```
+/results/?user_id=id
+```
+
+And for pagination, use the offset and limit query strings:
+
+```
+/results/?offset={offset}&limit={limit}
+```
+
+### Users:
+
+http://127.0.0.1:8000/users/
+
+That will returns:
+
+```json
+{
+  "count": 20,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 2,
+      "first_name": "Ashley",
+      "last_name": "Glass",
+      "email": "jonathan48@yahoo.com"
+    },
+    // ...
+    {
+      "id": 21,
+      "first_name": "Ryan",
+      "last_name": "Brown",
+      "email": "michaelthomas@yahoo.com"
+    }
+  ]
+}
+```
 
 ## License
 
