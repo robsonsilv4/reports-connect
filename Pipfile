@@ -11,6 +11,7 @@ factory-boy = "*"
 django-cors-headers = "*"
 whitenoise = "*"
 brotli = "*"
+django-compressor = "*"
 
 [dev-packages]
 black = "*"

@@ -1,5 +1,9 @@
 {% load static %}
 
+<!-- compress -->
+
+{% load compress %}
+
 <!-- base -->
 
 <!DOCTYPE html>
@@ -9,7 +13,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %}HeavyConnect Challenge{% endblock %}</title>
+    {% compress css %}
     <link rel="stylesheet" href="{% static 'vendor/css/bulma.min.css' %}" />
+    {% endcompress %}
   </head>
 
   <body>
@@ -23,8 +29,12 @@
 
     <div class="container">{% block content %}{% endblock %}</div>
 
+    {% compress js %}
+    <!-- js -->
     {% block js %}
     <script src="{% static 'vendor/js/angular.min.js' %}"></script>
     {% endblock %}
+    <!-- js -->
+    {% endcompress %}
   </body>
 </html>

@@ -24,6 +24,7 @@ THIRD_PARTY_APPS = [
     "rest_framework",
     "corsheaders",
     "whitenoise",
+    "compressor",
 ]
 
 LOCAL_APPS = [
@@ -97,7 +98,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_ROOT = "/staticfiles/"
+STATIC_ROOT = "staticfiles/"
 
 STATIC_URL = "/static/"
 
@@ -105,7 +106,17 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    "compressor.finders.CompressorFinder",
+]
+
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+COMPRESS_ENABLED = True
+
+COMPRESS_OFFLINE = True
 
 AUTH_USER_MODEL = "users.User"
 
